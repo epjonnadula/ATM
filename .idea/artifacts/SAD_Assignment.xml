@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="SAD Assignment">
+    <output-path>$PROJECT_DIR$/out/artifacts/SAD_Assignment</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="welcome.Main" />
+        <option name="description" value="" />
+        <option name="htmlParamFile" value="" />
+        <option name="paramFile" value="" />
+        <option name="title" value="ATM" />
+        <option name="vendor" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="SAD_Assignment.jar">
+        <element id="module-output" name="ATM" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-5.1.40-bin.jar" />
+    </root>
+  </artifact>
+</component>
