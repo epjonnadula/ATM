@@ -1,5 +1,5 @@
 # ATM
-This is an JavaFX application developed as part of my acedemic project in college(National Institute of Technolgy, Rourkela).
+This is a JavaFX application developed as part of my acedemic project in college(National Institute of Technolgy, Rourkela).
 
 This application demonstrates the working of ATM Machine.
 
