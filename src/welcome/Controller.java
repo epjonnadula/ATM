@@ -25,7 +25,7 @@ public class Controller {
 
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = null;
-        con = DriverManager.getConnection("jdbc:mysql://localhost/test","root", "");
+        con = DriverManager.getConnection("jdbc:mysql://localhost/atm","root", "");
         Statement st=con.createStatement();
         String q="SELECT COUNT(userid) as count FROM account WHERE userid="+"'"+userid.getText()+"' AND userpin="+"'"+userpin.getText()+"'";
         ResultSet rs=st.executeQuery(q);
@@ -64,7 +64,7 @@ public class Controller {
     public void balanceenquiry(ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = null;
-        con = DriverManager.getConnection("jdbc:mysql://localhost/test","root", "");
+        con = DriverManager.getConnection("jdbc:mysql://localhost/atm","root", "");
         Statement st=con.createStatement();
         String query="Select amount from account where userid="+"'"+id+"'";
         ResultSet rs=st.executeQuery(query);
@@ -92,7 +92,7 @@ public class Controller {
     public void withdrawAmount(ActionEvent event) throws ClassNotFoundException, SQLException, IOException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = null;
-        con = DriverManager.getConnection("jdbc:mysql://localhost/test","root", "");
+        con = DriverManager.getConnection("jdbc:mysql://localhost/atm","root", "");
         Statement st=con.createStatement();
         String query="Select amount from account where userid="+"'"+id+"'";
         ResultSet rs=st.executeQuery(query);
@@ -139,7 +139,7 @@ public class Controller {
     public void depositAmount(ActionEvent event) throws IOException, ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = null;
-        con = DriverManager.getConnection("jdbc:mysql://localhost/test","root", "");
+        con = DriverManager.getConnection("jdbc:mysql://localhost/atm","root", "");
         Statement st=con.createStatement();
         String query="Select amount from account where userid="+"'"+id+"'";
         ResultSet rs=st.executeQuery(query);
@@ -170,7 +170,7 @@ public class Controller {
     public void pinchangeTrans(ActionEvent event) throws ClassNotFoundException, SQLException, IOException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = null;
-        con = DriverManager.getConnection("jdbc:mysql://localhost/test","root", "");
+        con = DriverManager.getConnection("jdbc:mysql://localhost/atm","root", "");
         Statement st=con.createStatement();
         if (newpin.getText().equals(confirmnewpin.getText()))
         {
@@ -191,7 +191,7 @@ public class Controller {
     public void transferfundsTrans(ActionEvent event) throws ClassNotFoundException, SQLException, IOException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = null;
-        con = DriverManager.getConnection("jdbc:mysql://localhost/test","root", "");
+        con = DriverManager.getConnection("jdbc:mysql://localhost/atm","root", "");
         Statement st=con.createStatement();
         String q1="Select amount from account where userid="+"'"+id+"'";
         ResultSet rs1=st.executeQuery(q1);
@@ -243,7 +243,7 @@ public class Controller {
     public void addAmount(ActionEvent event) throws ClassNotFoundException, SQLException, IOException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = null;
-        con = DriverManager.getConnection("jdbc:mysql://localhost/test","root", "");
+        con = DriverManager.getConnection("jdbc:mysql://localhost/atm","root", "");
         Statement st=con.createStatement();
         String query="Select max_amount from admin where 1";
         ResultSet rs=st.executeQuery(query);
